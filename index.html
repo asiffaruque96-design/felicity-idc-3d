@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Felicity IDC — Infrastructure That Does Not Blink</title>
+<meta name="description" content="Felicity IDC — sovereign digital infrastructure engineered for continuous operation. A spatial, engineered digital flagship." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Three.js + GSAP via CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body class="loading">
+
+<!-- ============ LOADER ============ -->
+<div id="loader">
+  <div class="loader-word">FELICITY IDC</div>
+  <div class="loader-sub">INITIALIZING CRITICAL INFRASTRUCTURE</div>
+  <div class="loader-bar"><div class="loader-bar-fill" id="loader-fill"></div></div>
+  <div class="loader-pct" id="loader-pct">00%</div>
+</div>
+<div id="loader-mask"></div>
+
+<!-- ============ 3D SCENE CANVAS (fixed, sits behind all content) ============ -->
+<canvas id="scene-canvas"></canvas>
+<div id="webgl-fallback-grid" aria-hidden="true"></div>
+
+<div id="cursor"></div>
+<div id="progress-bar"></div>
+
+<!-- ============ HEADER ============ -->
+<header id="site-header">
+  <a href="#hero" class="wordmark"><img src="assets/logo.png" alt="Felicity IDC" class="logo-img"></a>
+  <nav class="primary-nav">
+    <a href="#infrastructure">Infrastructure</a>
+    <a href="#resilience">Resilience</a>
+    <a href="#connectivity">Connectivity</a>
+    <a href="#operations">Operations</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="systems-status"><span class="status-dot"></span> Systems Operational</div>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section id="hero" data-scene="core">
+  <div class="hero-inner">
+    <div class="hero-eyebrow mono-label"><span class="status-dot"></span> Bangladesh / Carrier-Neutral Infrastructure</div>
+    <h1 class="hero-headline serif-xl">
+      <span class="line">INFRASTRUCTURE</span>
+      <span class="line orange">THAT DOES NOT</span>
+      <span class="line">BLINK.</span>
+    </h1>
+    <p class="hero-copy">Carrier-neutral data center infrastructure engineered for continuous availability, sovereign control and enterprise-scale digital operations.</p>
+    <div class="hero-actions">
+      <a href="#infrastructure" class="btn-primary magnetic">Explore the Bluebook →</a>
+      <a href="#contact" class="btn-text">Request a Site Visit</a>
+    </div>
+  </div>
+  <div class="hero-tags">
+    <span class="hero-tag" data-tag="power">Power</span>
+    <span class="hero-tag" data-tag="cooling">Cooling</span>
+    <span class="hero-tag" data-tag="connectivity">Connectivity</span>
+    <span class="hero-tag" data-tag="security">Security</span>
+    <span class="hero-tag" data-tag="operations">Operations</span>
+  </div>
+  <div class="scroll-cue"><span>Scroll</span><span class="line"></span></div>
+</section>
+
+<!-- ============ MANIFESTO ============ -->
+<section id="manifesto">
+  <div class="container">
+    <div class="section-index">01 / THE MISSION</div>
+    <div class="manifesto-grid">
+      <div class="manifesto-left">
+        <h2 class="serif-xl reveal">WHEN DIGITAL OPERATIONS CANNOT STOP, THE INFRASTRUCTURE CANNOT COMPROMISE.</h2>
+      </div>
+      <div class="manifesto-right">
+        <p class="reveal">Felicity IDC supports banks, telecom operators, government systems, cloud platforms, enterprises and digital services that require infrastructure disciplined enough to remain available under sustained operational pressure.</p>
+        <div class="annotation reveal">DESIGNED FOR CONTINUITY.<br>BUILT FOR CONSEQUENCE.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INFRASTRUCTURE (exploded model) ============ -->
+<section id="infrastructure" data-scene="exploded">
+  <div class="container">
+    <div class="section-index">02 / INFRASTRUCTURE</div>
+    <div class="blueprint-head">
+      <h2 class="serif-xl reveal">An exploded architecture — power and cooling resolved into one operating system.</h2>
+    </div>
+
+    <div class="spec-labels" id="spec-labels">
+      <div class="spec-label" data-anchor="utility"><span class="spec-val">11 kV / 0.4 kV</span><span class="spec-name">Utility Input</span></div>
+      <div class="spec-label" data-anchor="transformer"><span class="spec-val">2.5 MVA</span><span class="spec-name">Transformer</span></div>
+      <div class="spec-label" data-anchor="ups"><span class="spec-val">2N Path</span><span class="spec-name">UPS System</span></div>
+      <div class="spec-label" data-anchor="hall"><span class="spec-val">1,200 kW</span><span class="spec-name">Continuous Power</span></div>
+      <div class="spec-label" data-anchor="rack"><span class="spec-val">140 Racks</span><span class="spec-name">Data Hall Capacity</span></div>
+      <div class="spec-label" data-anchor="chiller"><span class="spec-val">Magnetic Bearing</span><span class="spec-name">Cooling Topology</span></div>
+      <div class="spec-label" data-anchor="ground"><span class="spec-val">≤ 1.0 Ω</span><span class="spec-name">Grounding Matrix</span></div>
+    </div>
+
+    <div class="scene-spacer" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- ============ RESILIENCE ============ -->
+<section id="resilience" class="dark-section">
+  <div class="container">
+    <div class="section-index">03 / RESILIENCE</div>
+    <div class="resilience-head">
+      <h2 class="serif-xl reveal">REDUNDANCY IS NOT A FEATURE. IT IS THE OPERATING PRINCIPLE.</h2>
+    </div>
+    <div class="panels">
+      <div class="panel reveal"><div class="panel-num">01</div><h3>Power</h3><p>Dual-path mission-critical electrical architecture.</p><div class="panel-detail">2N distribution / automatic transfer / isolated bus paths</div></div>
+      <div class="panel reveal"><div class="panel-num">02</div><h3>Cooling</h3><p>High-efficiency precision environmental control.</p><div class="panel-detail">N+1 chiller redundancy / contained aisle airflow</div></div>
+      <div class="panel reveal"><div class="panel-num">03</div><h3>Network</h3><p>Carrier-neutral, diverse-route connectivity.</p><div class="panel-detail">Multi-carrier entry / physically diverse duct routes</div></div>
+      <div class="panel reveal"><div class="panel-num">04</div><h3>Operations</h3><p>Continuous monitoring and controlled response.</p><div class="panel-detail">24/7 NOC-FOC / defined escalation protocol</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ METRICS (dimensional numbers) ============ -->
+<section id="metrics">
+  <div class="container metrics-grid">
+    <div class="metric reveal m1"><div class="metric-val" data-count="140">0</div><div class="metric-label">Data Hall Racks</div></div>
+    <div class="metric reveal m2"><div class="metric-val" data-static="2.5 MVA">2.5 MVA</div><div class="metric-label">Transformer Capacity</div></div>
+    <div class="metric reveal m3"><div class="metric-val" data-count="1200" data-suffix=" kW">0</div><div class="metric-label">Continuous Power</div></div>
+    <div class="metric reveal m4"><div class="metric-val" data-static="11 kV">11 kV</div><div class="metric-label">Utility Input</div></div>
+    <div class="metric reveal m5"><div class="metric-val" data-static="24/7">24 / 7</div><div class="metric-label">Operational Oversight</div></div>
+    <div class="metric reveal m6"><div class="metric-val" data-static="≤ 1.0 Ω">≤ 1.0 Ω</div><div class="metric-label">Ground Matrix</div></div>
+  </div>
+</section>
+
+<!-- ============ CONNECTIVITY ============ -->
+<section id="connectivity" data-scene="fibre">
+  <div class="container">
+    <div class="section-index">04 / CONNECTIVITY</div>
+    <div class="connectivity-head"><h2 class="serif-xl reveal">CONNECTED BEYOND A SINGLE PATH.</h2></div>
+    <p class="connectivity-copy reveal">Felicity IDC integrates terrestrial fibre, carrier diversity, cloud connectivity and satellite-backed infrastructure into a unified resilience fabric.</p>
+
+    <div class="stage-list">
+      <div class="stage reveal"><div class="stage-num mono-label">STAGE 01</div><h3>NATIONAL REACH</h3><p>Terrestrial fibre backbone spanning primary economic and connectivity corridors.</p></div>
+      <div class="stage reveal"><div class="stage-num mono-label">STAGE 02</div><h3>CARRIER DIVERSITY</h3><p>Multiple independent carriers and DWDM optical rings remove single-path dependency.</p></div>
+      <div class="stage reveal"><div class="stage-num mono-label">STAGE 03</div><h3>GLOBAL ACCESS</h3><p>Enterprise, cloud, government and international gateway routes converge into one fabric.</p></div>
+    </div>
+    <div class="scene-spacer tall" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- ============ ORBITAL / STARLINK ============ -->
+<section id="orbital" class="dark-section" data-scene="orbital">
+  <div class="container">
+    <div class="section-index">05 / ORBITAL RESILIENCE</div>
+    <div class="orbital-head"><h2 class="serif-xl reveal">GROUND INFRASTRUCTURE FOR ORBITAL CONNECTIVITY.</h2></div>
+    <div class="orbital-grid">
+      <div class="orbital-cell reveal"><div class="cell-title">Ground Station Sites</div><h4>Kaliakoir &amp; Saidpur</h4><p>Hub and infrastructure landing facility supporting orbital-to-ground handoff.</p></div>
+      <div class="orbital-cell reveal"><div class="cell-title">Lease Holdings</div><h4>Long-Term Civil Sites</h4><p>Secured civil site leases with dedicated power and physical security provisions.</p></div>
+      <div class="orbital-cell reveal"><div class="cell-title">Backhaul Architecture</div><h4>Intra-Station DWDM Rings</h4><p>Ultra-resilient optical ring topology linking ground infrastructure to the core.</p></div>
+      <div class="orbital-cell reveal"><div class="cell-title">Point of Presence</div><h4>Data Center PoP Hosting</h4><p>Dedicated rack hosting for orbital network point-of-presence equipment.</p></div>
+      <div class="orbital-cell reveal wide"><div class="cell-title">Enterprise Access</div><h4>Authorized Reseller Capability</h4><p>Enterprise and government reseller access channels for orbital-backed connectivity.</p></div>
+    </div>
+    <div class="scene-spacer" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- ============ FACILITY ============ -->
+<section id="facility">
+  <div class="container">
+    <div class="section-index">06 / INSIDE THE FACILITY</div>
+    <div class="facility-collage">
+      <div class="collage-main reveal">
+        <img src="https://images.unsplash.com/photo-1591405351990-4726e331f141?q=80&w=1200&auto=format&fit=crop" alt="Modern data hall interior with server racks" loading="lazy">
+        <div class="spec-floating">DATA HALL / 140 RACK CAPACITY</div>
+      </div>
+      <div class="collage-side">
+        <div class="collage-crop reveal"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=800&auto=format&fit=crop" alt="Precision cooling infrastructure detail" loading="lazy"></div>
+        <div class="collage-crop reveal"><img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=800&auto=format&fit=crop" alt="Fibre cabling detail" loading="lazy"></div>
+        <div class="collage-caption"><span>ENGINEERED ENVIRONMENTS.</span><span>CONTROLLED VARIABLES.</span><span>CONTINUOUS OPERATIONS.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OPERATIONS ============ -->
+<section id="operations" class="dark-section" data-scene="operations">
+  <div class="container">
+    <div class="section-index">07 / OPERATIONS</div>
+    <div class="ops-head"><h2 class="serif-xl reveal">EVERY SYSTEM. OBSERVED.<br>EVERY ANOMALY. ANSWERED.</h2></div>
+    <div class="ops-dashboard">
+      <div class="ops-tile reveal"><div class="ops-label">Power Status</div><div class="ops-state"><span class="status-dot"></span>Nominal</div><div class="ops-bar"><div class="ops-bar-fill" data-w="96"></div></div></div>
+      <div class="ops-tile reveal"><div class="ops-label">Cooling Status</div><div class="ops-state"><span class="status-dot"></span>Nominal</div><div class="ops-bar"><div class="ops-bar-fill" data-w="92"></div></div></div>
+      <div class="ops-tile reveal"><div class="ops-label">Environmental Monitoring</div><div class="ops-state"><span class="status-dot"></span>Active</div><div class="ops-bar"><div class="ops-bar-fill" data-w="100"></div></div></div>
+      <div class="ops-tile reveal"><div class="ops-label">Access Control</div><div class="ops-state"><span class="status-dot"></span>Secured</div><div class="ops-bar"><div class="ops-bar-fill" data-w="100"></div></div></div>
+      <div class="ops-tile reveal"><div class="ops-label">Network Availability</div><div class="ops-state"><span class="status-dot"></span>Stable</div><div class="ops-bar"><div class="ops-bar-fill" data-w="98"></div></div></div>
+      <div class="ops-tile reveal"><div class="ops-label">Incident Response</div><div class="ops-state"><span class="status-dot"></span>Ready</div><div class="ops-bar"><div class="ops-bar-fill" data-w="90"></div></div></div>
+      <div class="ops-tile reveal"><div class="ops-label">Capacity Monitoring</div><div class="ops-state"><span class="status-dot"></span>Tracked</div><div class="ops-bar"><div class="ops-bar-fill" data-w="84"></div></div></div>
+      <div class="ops-tile reveal"><div class="ops-label">Preventive Maintenance</div><div class="ops-state"><span class="status-dot"></span>Scheduled</div><div class="ops-bar"><div class="ops-bar-fill" data-w="88"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INDUSTRIES ============ -->
+<section id="industries">
+  <div class="container">
+    <div class="section-index">08 / BUILT FOR CONSEQUENCE</div>
+    <div class="industries-head"><h2 class="serif-xl reveal">Infrastructure risk, removed by sector.</h2></div>
+    <div class="industry-list">
+      <div class="industry-row" data-token="vault" data-desc="Removing settlement and transaction-path downtime risk from core banking operations."><div class="industry-row-top"><span class="industry-token"></span><h3>Banking &amp; Financial Services</h3><span class="industry-num">01</span></div><div class="industry-desc"></div></div>
+      <div class="industry-row" data-token="tower" data-desc="Providing carrier-neutral interconnection that removes single-operator dependency."><div class="industry-row-top"><span class="industry-token"></span><h3>Telecommunications</h3><span class="industry-num">02</span></div><div class="industry-desc"></div></div>
+      <div class="industry-row" data-token="shield" data-desc="Delivering sovereign hosting control for public-sector digital service continuity."><div class="industry-row-top"><span class="industry-token"></span><h3>Government &amp; Public Infrastructure</h3><span class="industry-num">03</span></div><div class="industry-desc"></div></div>
+      <div class="industry-row" data-token="cloud" data-desc="Offering diverse, low-latency interconnection between cloud regions and enterprise networks."><div class="industry-row-top"><span class="industry-token"></span><h3>Cloud &amp; Digital Platforms</h3><span class="industry-num">04</span></div><div class="industry-desc"></div></div>
+      <div class="industry-row" data-token="grid" data-desc="Consolidating fragmented enterprise IT footprints into a monitored, resilient environment."><div class="industry-row-top"><span class="industry-token"></span><h3>Large Enterprises</h3><span class="industry-num">05</span></div><div class="industry-desc"></div></div>
+      <div class="industry-row" data-token="pulse" data-desc="Supporting continuous availability requirements for sensitive patient data systems."><div class="industry-row-top"><span class="industry-token"></span><h3>Healthcare Systems</h3><span class="industry-num">06</span></div><div class="industry-desc"></div></div>
+      <div class="industry-row" data-token="gear" data-desc="Maintaining always-on control-system connectivity across production environments."><div class="industry-row-top"><span class="industry-token"></span><h3>Manufacturing</h3><span class="industry-num">07</span></div><div class="industry-desc"></div></div>
+      <div class="industry-row" data-token="stream" data-desc="Sustaining high-throughput delivery infrastructure for content and media platforms."><div class="industry-row-top"><span class="industry-token"></span><h3>Content &amp; Media</h3><span class="industry-num">08</span></div><div class="industry-desc"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOCATIONS ============ -->
+<section id="locations" class="dark-section">
+  <div class="container">
+    <div class="section-index">09 / SOVEREIGN FOOTPRINT</div>
+    <div class="locations-head"><h2 class="serif-xl reveal">Infrastructure positioned across Bangladesh's digital corridors.</h2></div>
+    <div class="locations-body">
+      <div class="location-list">
+        <div class="location-item reveal"><div class="loc-name">Kaliakoir Hi-Tech Park</div><div class="loc-coord">24.0114° N, 90.2172° E</div><p>Primary mission-critical infrastructure location.</p></div>
+        <div class="location-item reveal"><div class="loc-name">Jashore Hi-Tech Park</div><div class="loc-coord">23.1664° N, 89.2081° E</div><p>Strategic secondary digital infrastructure location.</p></div>
+        <div class="location-item reveal"><div class="loc-name">Saidpur</div><div class="loc-coord">25.7788° N, 88.8986° E</div><p>Ground infrastructure and connectivity expansion node.</p></div>
+      </div>
+      <div class="locations-map">
+        <!--
+          Outline approximates Bangladesh's national boundary (simplified
+          polygon), plotted on an equirectangular projection:
+          lonMin 88.0 / lonMax 92.7, latMin 20.5 / latMax 26.6, mapped to
+          a 300x400 viewBox. Node positions below use the same lon/lat ->
+          x/y transform so each pin sits at its true geographic location:
+            x = (lon - 88.0) / 4.7 * 300
+            y = (26.6 - lat) / 6.1 * 400
+        -->
+        <svg viewBox="0 0 300 400" width="100%" fill="none">
+          <path d="M19,7 L32,13 L115,7 L236,92 L255,111 L243,170 L223,203 L236,249 L274,334 L281,374 L243,282 L160,328 L147,289 L115,315 L89,321 L64,308 L57,282 L32,236 L6,171 L19,85 Z"
+                stroke="#64748B" stroke-opacity=".55" stroke-width="1.5" class="draw-line"/>
+
+          <!-- connections from the primary hub (Kaliakoir) -->
+          <path d="M142,170 L57,54" stroke="#F95700" stroke-opacity=".5" stroke-dasharray="4 4"/>
+          <path d="M142,170 L77,225" stroke="#F95700" stroke-opacity=".5" stroke-dasharray="4 4"/>
+
+          <!-- Kaliakoir Hi-Tech Park — 24.0114°N, 90.2172°E — primary site -->
+          <circle class="loc-node" cx="142" cy="170" r="5" fill="#F95700"/>
+          <text x="152" y="167" fill="#F8FAFC" font-family="IBM Plex Mono" font-size="9">KALIAKOIR</text>
+          <text x="152" y="178" fill="#94A3B8" font-family="IBM Plex Mono" font-size="7">24.01N 90.22E</text>
+
+          <!-- Jashore Hi-Tech Park — 23.1664°N, 89.2081°E — secondary site -->
+          <circle class="loc-node" cx="77" cy="225" r="5" fill="#F95700"/>
+          <text x="87" y="222" fill="#F8FAFC" font-family="IBM Plex Mono" font-size="9">JASHORE</text>
+          <text x="87" y="233" fill="#94A3B8" font-family="IBM Plex Mono" font-size="7">23.17N 89.21E</text>
+
+          <!-- Saidpur — 25.7788°N, 88.8986°E — ground infrastructure node -->
+          <circle class="loc-node" cx="57" cy="54" r="5" fill="#C7F36B"/>
+          <text x="67" y="51" fill="#F8FAFC" font-family="IBM Plex Mono" font-size="9">SAIDPUR</text>
+          <text x="67" y="62" fill="#94A3B8" font-family="IBM Plex Mono" font-size="7">25.78N 88.90E</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST ============ -->
+<section id="trust">
+  <div class="container">
+    <div class="section-index">— PARTNER ECOSYSTEM</div>
+    <h2 class="serif-xl reveal">INFRASTRUCTURE IS STRONGER WHEN THE ECOSYSTEM IS CONNECTED.</h2>
+    <div class="trust-grid">
+      <div class="trust-cell"><div class="trust-tag">Carrier Interconnection</div><p>Fibre Operators</p></div>
+      <div class="trust-cell"><div class="trust-tag">Carrier Interconnection</div><p>Carriers</p></div>
+      <div class="trust-cell"><div class="trust-tag">Technology Alignment</div><p>Cloud Platforms</p></div>
+      <div class="trust-cell"><div class="trust-tag">Technology Alignment</div><p>Enterprise Technology Partners</p></div>
+      <div class="trust-cell"><div class="trust-tag">Technology Alignment</div><p>Power &amp; Cooling Technology Providers</p></div>
+      <div class="trust-cell"><div class="trust-tag">Partner Ecosystem</div><p>Government Technology Ecosystem</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INSIGHTS ============ -->
+<section id="insights" class="dark-section">
+  <div class="container">
+    <div class="section-index">10 / FIELD NOTES</div>
+    <div class="insights-head"><h2 class="serif-xl reveal">Notes from the infrastructure discipline.</h2></div>
+    <div class="insight-cards">
+      <a class="insight-card reveal" href="#contact"><div class="insight-thumb"><svg width="100%" height="100%" viewBox="0 0 200 100"><path d="M0 80 L40 40 L80 60 L120 20 L160 50 L200 10" stroke="#F95700" stroke-width="1" fill="none"/></svg></div><div class="insight-meta"><span>Connectivity</span><span>6 min read</span></div><h3>Designing Beyond Single-Path Connectivity</h3><div class="insight-arrow">READ →</div></a>
+      <a class="insight-card reveal" href="#contact"><div class="insight-thumb"><svg width="100%" height="100%" viewBox="0 0 200 100"><rect x="20" y="20" width="30" height="60" stroke="#F95700" fill="none"/><rect x="70" y="10" width="30" height="70" stroke="#F95700" fill="none"/><rect x="120" y="30" width="30" height="50" stroke="#F95700" fill="none"/></svg></div><div class="insight-meta"><span>Sovereignty</span><span>8 min read</span></div><h3>Why Sovereign Infrastructure Matters</h3><div class="insight-arrow">READ →</div></a>
+      <a class="insight-card reveal" href="#contact"><div class="insight-thumb"><svg width="100%" height="100%" viewBox="0 0 200 100"><circle cx="100" cy="50" r="8" fill="#F95700"/><circle cx="40" cy="50" r="4" stroke="#F95700" fill="none"/><circle cx="160" cy="50" r="4" stroke="#F95700" fill="none"/><line x1="48" y1="50" x2="92" y2="50" stroke="#F95700"/><line x1="108" y1="50" x2="152" y2="50" stroke="#F95700"/></svg></div><div class="insight-meta"><span>Operations</span><span>5 min read</span></div><h3>Engineering Operational Continuity</h3><div class="insight-arrow">READ →</div></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" data-scene="contract">
+  <div class="container">
+    <div class="section-index">— CONTACT</div>
+    <div class="contact-head"><h2 class="serif-xl reveal">LET'S ENGINEER<br>WHAT CANNOT FAIL.</h2></div>
+    <div class="contact-grid">
+      <div class="contact-options">
+        <div class="contact-option">Schedule a Facility Visit</div>
+        <div class="contact-option">Request Technical Consultation</div>
+        <div class="contact-option">Discuss Colocation Requirements</div>
+        <div class="contact-option">Explore Connectivity Partnerships</div>
+        <div class="contact-cta">
+          <button type="submit" form="contact-form" class="btn-primary magnetic">Start a Conversation</button>
+          <a href="#" class="btn-text" id="download-bluebook">Download Infrastructure Bluebook</a>
+        </div>
+      </div>
+      <form id="contact-form" novalidate>
+        <div class="field" data-field="name"><label for="name">Name</label><input type="text" id="name" name="name" autocomplete="name"><div class="err-msg">Please enter your name.</div></div>
+        <div class="field" data-field="company"><label for="company">Company</label><input type="text" id="company" name="company" autocomplete="organization"><div class="err-msg">Please enter your company.</div></div>
+        <div class="field" data-field="email"><label for="email">Work Email</label><input type="email" id="email" name="email" autocomplete="email"><div class="err-msg">Please enter a valid work email.</div></div>
+        <div class="field" data-field="requirement"><label for="requirement">Requirement Type</label>
+          <select id="requirement" name="requirement">
+            <option value="">Select requirement type</option>
+            <option value="colocation">Colocation</option>
+            <option value="connectivity">Connectivity</option>
+            <option value="cloud">Cloud On-Ramp</option>
+            <option value="site-visit">Site Visit</option>
+            <option value="other">Other</option>
+          </select>
+          <div class="err-msg">Please select a requirement type.</div>
+        </div>
+        <div class="field" data-field="message"><label for="message">Message</label><textarea id="message" name="message"></textarea><div class="err-msg">Please add a short message.</div></div>
+        <div class="submit-row"><button type="submit" class="btn-primary magnetic">Submit Request →</button><span id="form-status"></span></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="scan-line"></div>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand"><div class="wordmark-text">FELICITY IDC</div><p>Sovereign digital infrastructure for mission-critical operations.</p></div>
+      <div class="footer-col"><h4>Platform</h4><a href="#infrastructure">Infrastructure</a><a href="#connectivity">Connectivity</a><a href="#operations">Operations</a></div>
+      <div class="footer-col"><h4>Company</h4><a href="#resilience">Security</a><a href="#insights">Insights</a><a href="#contact">Contact</a></div>
+      <div class="footer-col"><h4>Footprint</h4><p>Kaliakoir</p><p>Jashore</p><p>Bangladesh</p></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 FELICITY IDC</span><span>FIDC / DIGITAL INFRASTRUCTURE BLUEBOOK / 2026</span></div>
+  </div>
+</footer>
+
+<script src="js/scene.js"></script>
+<script src="js/icons.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
