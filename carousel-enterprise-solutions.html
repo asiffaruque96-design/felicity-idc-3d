@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIDC Enterprise Solutions Carousel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              black: '#0A0B0E',
+              dark: '#111318',
+              card: '#161922',
+              orange: '#e96a24',
+              orangeGlow: 'rgba(233, 106, 36, 0.15)',
+              border: '#232733',
+              muted: '#8A92A6',
+              white: '#FFFFFF'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @media print {
+      @page {
+        size: 1080px 1350px;
+        margin: 0;
+      }
+      body {
+        margin: 0;
+        background: transparent;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .slide {
+        page-break-after: always;
+        break-after: page;
+      }
+    }
+  </style>
+</head>
+<body class="bg-black font-sans text-brand-white flex flex-col items-center py-10 gap-10">
+
+  <!-- Export Control -->
+  <button onclick="window.print()" class="no-print fixed top-6 right-6 z-50 bg-[#e96a24] hover:bg-[#d45815] text-white font-bold py-3.5 px-7 rounded-full shadow-2xl transition duration-200 flex items-center gap-2 border border-white/20">
+    <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
+    <span>Export Carousel as PDF</span>
+  </button>
+
+  <!-- SLIDE 1: COVER / HOOK -->
+  <div class="slide w-[1080px] h-[1350px] bg-brand-black relative p-20 flex flex-col justify-between overflow-hidden border border-brand-border shadow-2xl">
+    <!-- Top Bar -->
+    <div class="flex justify-between items-center z-10">
+      <div class="flex items-center gap-3">
+        <div class="w-3.5 h-3.5 rounded-full bg-brand-orange animate-pulse"></div>
+        <span class="text-xl font-display font-bold tracking-wider text-white">FELICITY <span class="text-brand-orange">IDC</span></span>
+      </div>
+      <span class="px-4 py-1.5 rounded-full bg-brand-orange/10 border border-brand-orange/30 text-brand-orange text-sm font-semibold tracking-wider uppercase">
+        Infrastructure Ecosystem
+      </span>
+    </div>
+
+    <!-- Main Hero Hook -->
+    <div class="z-10 space-y-8 my-auto">
+      <div class="inline-block text-brand-orange text-lg font-bold tracking-widest uppercase">
+        Tier III Certified Enterprise Suite
+      </div>
+      <h1 class="text-6xl font-display font-extrabold tracking-tight leading-[1.12] text-white">
+        Powering High-Density Mission-Critical <span class="text-brand-orange">Workloads.</span>
+      </h1>
+      <p class="text-2xl text-brand-muted leading-relaxed max-w-2xl">
+        From carrier-neutral colocation to Starlink enterprise links—a full overview of FIDC's sovereign digital infrastructure ecosystem.
+      </p>
+
+      <!-- Key Stat Highlights -->
+      <div class="grid grid-cols-3 gap-4 pt-4">
+        <div class="p-5 rounded-xl bg-brand-card border border-brand-border">
+          <p class="text-3xl font-display font-bold text-brand-orange">Uptime Tier III</p>
+          <p class="text-sm text-brand-muted font-medium mt-1">Certified Design & Facility</p>
+        </div>
+        <div class="p-5 rounded-xl bg-brand-card border border-brand-border">
+          <p class="text-3xl font-display font-bold text-white">2 Campuses</p>
+          <p class="text-sm text-brand-muted font-medium mt-1">Kaliakoir & Jashore</p>
+        </div>
+        <div class="p-5 rounded-xl bg-brand-card border border-brand-border">
+          <p class="text-3xl font-display font-bold text-white">100%</p>
+          <p class="text-sm text-brand-muted font-medium mt-1">Carrier Neutral</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide Footer -->
+    <div class="flex items-center justify-between pt-8 border-t border-brand-border z-10">
+      <span class="text-brand-muted text-base font-semibold tracking-wide">Swipe to explore core solutions</span>
+      <div class="flex items-center gap-2 text-brand-orange font-bold text-lg">
+        <span>01 / 06</span>
+        <span class="text-2xl">→</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 2: COLOCATION & NETWORK -->
+  <div class="slide w-[1080px] h-[1350px] bg-brand-black relative p-20 flex flex-col justify-between overflow-hidden border border-brand-border shadow-2xl">
+    <div class="flex justify-between items-center z-10">
+      <span class="text-brand-orange font-display font-bold text-lg tracking-wider">01. CORE INFRASTRUCTURE</span>
+      <span class="text-brand-muted font-mono text-sm tracking-widest">02 / 06</span>
+    </div>
+
+    <div class="z-10 space-y-8 my-auto">
+      <div>
+        <h2 class="text-4xl font-display font-extrabold text-white tracking-tight leading-tight">
+          Enterprise Colocation & Carrier Interconnect
+        </h2>
+        <p class="text-xl text-brand-muted mt-2">Zero-single-point-of-failure hosting with nationwide low-latency routing.</p>
+      </div>
+
+      <!-- Card 1 -->
+      <div class="bg-brand-card border-l-4 border-brand-orange border-y border-r border-brand-border p-8 rounded-2xl space-y-3">
+        <div class="flex items-center justify-between">
+          <h3 class="text-2xl font-bold text-white">Bangladesh's First Purpose-Built Colocation</h3>
+          <span class="px-3 py-1 bg-brand-orange/10 text-brand-orange text-xs font-bold rounded uppercase">Fault Tolerant</span>
+        </div>
+        <p class="text-lg text-brand-muted leading-relaxed">
+          100,000+ sq. ft. across Kaliakoir and Jashore — 500+ racks, 5 MW of power (up to 7.0 kW/rack), N+N power distribution, N+1 precision cooling, and 7-layer physical security engineered for BFSI & enterprise workloads.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-brand-card border border-brand-border p-8 rounded-2xl space-y-3">
+        <div class="flex items-center justify-between">
+          <h3 class="text-2xl font-bold text-white">Network as a Service (NaaS)</h3>
+          <span class="px-3 py-1 bg-white/10 text-white text-xs font-bold rounded uppercase">2–5ms Latency</span>
+        </div>
+        <p class="text-lg text-brand-muted leading-relaxed">
+          Backbone of an 80,000+ core-km fiber network with 35,000+ interconnected nodes. Hosts BDIX and connects directly to 50+ ISPs and 3 IIGs for multi-terabit, carrier-neutral bandwidth.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex items-center justify-between pt-8 border-t border-brand-border z-10">
+      <span class="text-sm text-brand-muted">Felicity IDC • Enterprise Solutions</span>
+      <div class="text-brand-muted text-sm font-semibold flex items-center gap-2">
+        Next: Cloud & Security <span class="text-brand-orange font-bold text-lg">→</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 3: PRIVATE CLOUD & SECURITY -->
+  <div class="slide w-[1080px] h-[1350px] bg-brand-black relative p-20 flex flex-col justify-between overflow-hidden border border-brand-border shadow-2xl">
+    <div class="flex justify-between items-center z-10">
+      <span class="text-brand-orange font-display font-bold text-lg tracking-wider">02. COMPLIANCE & DEFENSE</span>
+      <span class="text-brand-muted font-mono text-sm tracking-widest">03 / 06</span>
+    </div>
+
+    <div class="z-10 space-y-8 my-auto">
+      <div>
+        <h2 class="text-4xl font-display font-extrabold text-white tracking-tight leading-tight">
+          Private Cloud (IaaS) & Managed SOC
+        </h2>
+        <p class="text-xl text-brand-muted mt-2">In-country data residency coupled with 24/7/365 proactive defense.</p>
+      </div>
+
+      <!-- Card 1 -->
+      <div class="bg-brand-card border-l-4 border-brand-orange border-y border-r border-brand-border p-8 rounded-2xl space-y-3">
+        <div class="flex items-center justify-between">
+          <h3 class="text-2xl font-bold text-white">Cloud as a Service (Private Cloud)</h3>
+          <span class="px-3 py-1 bg-brand-orange/10 text-brand-orange text-xs font-bold rounded uppercase">BFSI Data Residency</span>
+        </div>
+        <p class="text-lg text-brand-muted leading-relaxed">
+          Powered by SAP-certified Cisco HyperFlex, built for mission-critical SAP S/4HANA and ERP workloads. Data stays fully in-country — a private cloud, not a public/hyperscale platform.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-brand-card border border-brand-border p-8 rounded-2xl space-y-3">
+        <div class="flex items-center justify-between">
+          <h3 class="text-2xl font-bold text-white">SOC as a Service (SOCaaS)</h3>
+          <span class="px-3 py-1 bg-white/10 text-white text-xs font-bold rounded uppercase">24/7 Monitoring</span>
+        </div>
+        <p class="text-lg text-brand-muted leading-relaxed">
+          Built on Stellar Cyber and Microsoft Sentinel, backed by expert analysts for real-time threat hunting, true alert triage, investigation, and compliance reporting — not just tooling.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex items-center justify-between pt-8 border-t border-brand-border z-10">
+      <span class="text-sm text-brand-muted">Felicity IDC • Enterprise Solutions</span>
+      <div class="text-brand-muted text-sm font-semibold flex items-center gap-2">
+        Next: Specialized Connectivity <span class="text-brand-orange font-bold text-lg">→</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 4: STARLINK & DC CONSULTANCY -->
+  <div class="slide w-[1080px] h-[1350px] bg-brand-black relative p-20 flex flex-col justify-between overflow-hidden border border-brand-border shadow-2xl">
+    <div class="flex justify-between items-center z-10">
+      <span class="text-brand-orange font-display font-bold text-lg tracking-wider">03. EXTENDED SOLUTIONS</span>
+      <span class="text-brand-muted font-mono text-sm tracking-widest">04 / 06</span>
+    </div>
+
+    <div class="z-10 space-y-8 my-auto">
+      <div>
+        <h2 class="text-4xl font-display font-extrabold text-white tracking-tight leading-tight">
+          Starlink Enterprise & DC Advisory
+        </h2>
+        <p class="text-xl text-brand-muted mt-2">Remote mission-critical communication and certified engineering advisory.</p>
+      </div>
+
+      <!-- Starlink Card -->
+      <div class="bg-brand-card border border-brand-border p-8 rounded-2xl space-y-3 relative overflow-hidden">
+        <div class="absolute -right-10 -bottom-10 w-36 h-36 bg-brand-orange/10 rounded-full blur-2xl"></div>
+        <div class="flex items-center justify-between">
+          <h3 class="text-2xl font-bold text-white">Starlink Enterprise Solutions</h3>
+          <span class="px-3 py-1 bg-brand-orange text-white text-xs font-bold rounded uppercase">Authorised Reseller</span>
+        </div>
+        <p class="text-lg text-brand-muted leading-relaxed">
+          FIDC is Bangladesh's Authorised Enterprise Solution Provider and Government Reseller of Starlink, delivering high-throughput, low-latency LEO satellite internet for remote infrastructure, disaster recovery, and mission-critical deployments.
+        </p>
+      </div>
+
+      <!-- Consultancy Card -->
+      <div class="bg-brand-card border border-brand-border p-8 rounded-2xl space-y-3">
+        <div class="flex items-center justify-between">
+          <h3 class="text-2xl font-bold text-white">Data Centre Infrastructure Consultancy</h3>
+          <span class="px-3 py-1 bg-white/10 text-white text-xs font-bold rounded uppercase">Certified Architects</span>
+        </div>
+        <p class="text-lg text-brand-muted leading-relaxed">
+          Advisory across power, cooling, security, network design, and capacity planning — delivered by FIDC's own certified operational workforce, grounded in running an actual Tier III facility.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex items-center justify-between pt-8 border-t border-brand-border z-10">
+      <span class="text-sm text-brand-muted">Felicity IDC • Enterprise Solutions</span>
+      <div class="text-brand-muted text-sm font-semibold flex items-center gap-2">
+        Next: Why Choose FIDC <span class="text-brand-orange font-bold text-lg">→</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 5: WHY FIDC (THE PILLARS) -->
+  <div class="slide w-[1080px] h-[1350px] bg-brand-black relative p-20 flex flex-col justify-between overflow-hidden border border-brand-border shadow-2xl">
+    <div class="flex justify-between items-center z-10">
+      <span class="text-brand-orange font-display font-bold text-lg tracking-wider">THE ADVANTAGE</span>
+      <span class="text-brand-muted font-mono text-sm tracking-widest">05 / 06</span>
+    </div>
+
+    <div class="z-10 space-y-8 my-auto">
+      <h2 class="text-4xl font-display font-extrabold text-white tracking-tight">
+        Engineered for Absolute Resiliency
+      </h2>
+
+      <!-- 4 Matrix Grid -->
+      <div class="grid grid-cols-2 gap-6">
+        <div class="p-6 rounded-2xl bg-brand-card border border-brand-border space-y-3">
+          <div class="text-brand-orange text-3xl font-display font-extrabold">N+N / N+1</div>
+          <h4 class="text-xl font-bold text-white">Tier III Redundancy</h4>
+          <p class="text-sm text-brand-muted leading-relaxed">Concurrently maintainable N+N power distribution and N+1 precision cooling architecture.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-brand-card border border-brand-border space-y-3">
+          <div class="text-brand-orange text-3xl font-display font-extrabold">Dual-Zone</div>
+          <h4 class="text-xl font-bold text-white">Geographic Diversity</h4>
+          <p class="text-sm text-brand-muted leading-relaxed">Campuses in distinct seismic zones (Kaliakoir & Jashore), earthquake-resistant to 7.5 on the Richter scale.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-brand-card border border-brand-border space-y-3">
+          <div class="text-brand-orange text-3xl font-display font-extrabold">Neutral</div>
+          <h4 class="text-xl font-bold text-white">Carrier Independence</h4>
+          <p class="text-sm text-brand-muted leading-relaxed">Direct interconnect access to 50+ ISPs, 3 IIGs, and BDIX across an 80,000+ core-km fiber backbone.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-brand-card border border-brand-border space-y-3">
+          <div class="text-brand-orange text-3xl font-display font-extrabold">Certified</div>
+          <h4 class="text-xl font-bold text-white">Global Compliance</h4>
+          <p class="text-sm text-brand-muted leading-relaxed">ISO 9001, 14001, 27001, 27017, 24762, 45001, and PCI-DSS aligned, with a CRISL 'A' credit rating.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex items-center justify-between pt-8 border-t border-brand-border z-10">
+      <span class="text-sm text-brand-muted">Felicity IDC • Enterprise Solutions</span>
+      <div class="text-brand-muted text-sm font-semibold flex items-center gap-2">
+        Next: Get Started <span class="text-brand-orange font-bold text-lg">→</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 6: CTA / CONTACT -->
+  <div class="slide w-[1080px] h-[1350px] bg-brand-black relative p-20 flex flex-col justify-between overflow-hidden border border-brand-border shadow-2xl text-center">
+    <div class="flex justify-between items-center z-10">
+      <span class="text-brand-orange font-display font-bold text-lg tracking-wider">FELICITY IDC</span>
+      <span class="text-brand-muted font-mono text-sm tracking-widest">06 / 06</span>
+    </div>
+
+    <div class="z-10 space-y-8 my-auto max-w-2xl mx-auto">
+      <div class="w-20 h-20 rounded-full bg-brand-orange/15 border border-brand-orange/40 text-brand-orange flex items-center justify-center mx-auto text-3xl font-bold">
+        ⚡
+      </div>
+      <h2 class="text-5xl font-display font-extrabold text-white tracking-tight leading-tight">
+        Build on Resilient Digital Infrastructure.
+      </h2>
+      <p class="text-xl text-brand-muted leading-relaxed">
+        Speak with our solutions architects to design your colocation, private cloud, or enterprise connectivity roadmap.
+      </p>
+
+      <!-- Contact Box -->
+      <div class="bg-brand-card border border-brand-border p-6 rounded-2xl inline-flex flex-col gap-3 text-left w-full mt-4">
+        <div class="flex items-center justify-between text-base">
+          <span class="text-brand-muted">Web:</span>
+          <span class="text-white font-semibold">felicity.net.bd</span>
+        </div>
+        <div class="flex items-center justify-between text-base">
+          <span class="text-brand-muted">Direct Email:</span>
+          <span class="text-brand-orange font-semibold">info@felicity.net.bd</span>
+        </div>
+        <div class="flex items-center justify-between text-base">
+          <span class="text-brand-muted">Location:</span>
+          <span class="text-white font-semibold">Kaliakoir & Jashore, Bangladesh</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-8 border-t border-brand-border z-10 text-sm text-brand-muted font-medium flex justify-between items-center">
+      <span>Save this guide for future infrastructure planning</span>
+      <span class="text-white font-semibold">Repost ♻️</span>
+    </div>
+  </div>
+
+</body>
+</html>
